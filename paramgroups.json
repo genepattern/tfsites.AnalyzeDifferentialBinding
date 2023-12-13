@@ -1,0 +1,35 @@
+[
+    {
+        "name": "First Dataset",
+        "description": "",
+        "hidden": false,
+        "parameters": [
+            "first.pbm.data",
+            "first.header.sequence.present",
+	    "first.column.forward",
+            "first.column.MFI",
+        ]
+    },
+{
+        "name": "Second Dataset",
+        "description": "",
+        "hidden": false,
+        "parameters": [
+            "second.pbm.data",
+            "second.header.sequence.present",
+            "second.column.forward",
+            "second.column.MFI",
+        ]
+    },
+{
+        "name": "Additional Parameters",
+        "description": "",
+        "hidden": false,
+        "parameters": [
+            "out.filename",
+            "kmers",
+            "scatter"
+        ]
+    }
+
+]

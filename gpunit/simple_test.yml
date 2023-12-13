@@ -1,0 +1,29 @@
+# Run this gpunit localy by calling:
+# ant -f ${GPUNIT_HOME}/build.xml -Dgpunit.diffStripTrailingCR="--strip-trailing-cr" -Dgp.host="127.0.0.1" -Dgp.url="http://127.0.0.1:8080" -Dgp.user="edjuaro@gmail.com" -Dgp.password="" -Dgpunit.testfolder=`pwd` gpunit
+# OR using gp-beta-ami:
+# ant -f ${GPUNIT_HOME}/build.xml -Dgpunit.diffStripTrailingCR="--strip-trailing-cr" -Dgp.host="beta.genepattern.org" -Dgp.url="https://beta.genepattern.org" -Dgp.user="**USERNAME**" -Dgp.password="**PUT_PASSWORD_HERE" -Dgpunit.testfolder=`pwd` gpunit
+
+#
+# Note: this test uses a custom diff command
+#
+
+name: "tfsites.DifferentialBindingAnalysis - Basic test"
+module: tfsites.DifferentialBindingAnalysis
+params:
+    first.pbm.data: "data/07-input_ets-raw-pbm-data.txt"
+    first.header.sequence.present: "FALSE"
+    first.column.forward: 1
+    first.column.mfi: 3
+    second.pbm.data: "data/07-input_gata4-raw-pbm2-data.txt"
+    second.header.sequence.present: "TRUE"
+    second.column.forward: 1
+    second.column.mfi: 3
+    out.filename:  "07-output-ets-gata4-diff-analysis.png"
+    kmers: "AAAAACCG,AAAAAACT"
+    scatter: 0.01
+    sequence: "AACTTTAATGCCTATGTTTGATTTGAAGTCATAGCATAAAAGGTAACATAAGCAACATCCTGACCAATTATCCAAACCATCCAGACATCCCTGAATGGCCAGAGCGTAGCACACGGTCTGTAGGATTAAGAGGTTAACTCCTATAACTTCAAACAAAGTGCCTGATAATAAAAGCAAAAAGTACAAAATTTTAGGTAACTTCCTTTCTTAATTAATTGGACTGACCAGGTGGAAGCGAAGAGTTCTGTGCTGGTGCTTGGAATGTCTATAAAGCTGAGCAACATGACAGCACAATAGAGGAGGAACAAAGATTTTTTTAATATGTTTCTATCCTGTGTCACAGTTTGAAATTGTCCTGGTTTATGTCCCTTTTGGCAAACTTACATAAAAGTGACCTTGTACTGTATTTTATGACCAGATGACTTTTTCCCCCCAGTGGCTAATTTGTATCAGGCCTCCATCTTAAAGAGACACAGAGTGAGTAGGAAGTCCAGCCTCTGTCTCCACGAGCTTTCATTGCATTCTTTCATTATTTTTGCTCGTTTTTTGCCACTGATGATCCATAAATTGTTGGAAATGAGTGATTAAGGAAGTGCTGCTTAGTGTTAGTGGCACATGCGCATATTTGGCCTGGTTCTGGTGGGTGAGAGGAAATCACAGACAAAAGGGAAGCCCCTGCTGGGAACCCTGCAAGGAAATTTAACTTGGGTCATGTTTTGATCTTAGTGTTTATTACAGAAAATGAAGCCATATCTCACTAACTATTGTTACGTGTTAATTTGATTTTCC"
+    plot.resolution: 150
+    zoom: 1,200
+assertions:
+    jobStatus: success
+
