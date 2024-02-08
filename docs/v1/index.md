@@ -13,12 +13,12 @@
 
 ## Introduction
 
-differentialBindingAnalysis plots the enrichment scores (e-scores) from two PBM datasets against each other. This allows us to assess whether differential binding occurs between the two transcription factors. 
+`differentialBindingAnalysis` plots the enrichment scores (e-scores) from two PBM datasets against each other. This allows us to assess whether differential binding occurs between the two transcription factors. 
 
 
 ## Methodology
 
-The raw PBM datasets for two transcription factors are downloaded from uniPROBE. For each file, the user indicates the columns of the forward k-mer sequences and e-scores. For each k-mer sequence, its e-score from the first PBM file is plotted against its e-score from the second PBM file. Therefore, each data point in the plot is a k-mer with the ordered pair: (PBM 1 e-score, PBM 2 e-score). To indicate whether differential binding occurs, the resulting scatterplot can have either a trendline of the data points or a line with a slope of 1. 
+The raw PBM datasets for two transcription factors are downloaded from [uniPROBE](http://the_brain.bwh.harvard.edu/uniprobe/). For each file, the user indicates the columns of the forward k-mer sequences and e-scores. For each k-mer sequence, its e-score from the first PBM file is plotted against its e-score from the second PBM file. Therefore, each data point in the plot is a k-mer with the ordered pair: (PBM 1 e-score, PBM 2 e-score). To indicate whether differential binding occurs, the resulting scatterplot can have either a trendline of the data points or a line with a slope of 1. 
 
 ## Parameters
 
