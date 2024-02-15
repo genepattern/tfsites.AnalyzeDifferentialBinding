@@ -1,34 +1,29 @@
 [
     {
-        "name": "First Dataset",
+        "name": "Inputs and Outputs",
         "description": "",
         "hidden": false,
         "parameters": [
-            "first.pbm.data",
-            "first.header.sequence.present",
-	    "first.column.forward",
-            "first.column.MFI",
+            "raw.PBM.input.for.first.TF",
+            "raw.PBM.input.for.second.TF",
+	    "scatterplot.of.enrichment.scores"
         ]
     },
 {
-        "name": "Second Dataset",
+        "name": "Other Parameters",
         "description": "",
         "hidden": false,
         "parameters": [
-            "second.pbm.data",
-            "second.header.sequence.present",
-            "second.column.forward",
-            "second.column.MFI",
-        ]
-    },
-{
-        "name": "Additional Parameters",
-        "description": "",
-        "hidden": false,
-        "parameters": [
-            "out.filename",
-            "kmers",
-            "scatter"
+            "header.present.in.first.PBM.file",
+            "column.index.of.k-mers.in.first.PBM.file",
+            "column.index.of.E-scores.in.first.PBM.file",
+            "header.present.in.second.PBM.file",
+	    "column.index.of.k-mers.in.second.pbm.file",
+	    "column.index.of.E-scores.in.second.PBM.file",
+            "label.k-mers",
+            "scatter.alpha.threshold",
+	    "trendline"
+
         ]
     }
 
