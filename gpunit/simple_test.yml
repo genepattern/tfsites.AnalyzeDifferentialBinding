@@ -10,20 +10,18 @@
 name: "tfsites.DifferentialBindingAnalysis - Basic test"
 module: tfsites.DifferentialBindingAnalysis
 params:
-    first.pbm.data: "data/07-input_ets-raw-pbm-data.txt"
-    first.header.sequence.present: "FALSE"
-    first.column.forward: 1
-    first.column.mfi: 3
-    second.pbm.data: "data/07-input_gata4-raw-pbm2-data.txt"
-    second.header.sequence.present: "TRUE"
-    second.column.forward: 1
-    second.column.mfi: 3
-    out.filename:  "07-output-ets-gata4-diff-analysis.png"
-    kmers: "AAAAACCG,AAAAAACT"
-    scatter: 0.01
+    raw.PBM.input.for.first.TF: "data/07-input_ets-raw-pbm-data.txt"
+    header.present.in.first.PBM.file: "FALSE"
+    column.index.of.k-mers.in.first.PBM.file: 1
+    column.index.of.E-scores.in.first.PBM.file: 3
+    raw.PBM.input.for.second.TF: "data/07-input_gata4-raw-pbm2-data.txt"
+    header.present.in.second.PBM.file: "TRUE"
+    column.index.of.k-mers.in.second.PBM.file: 1
+    column.index.of.E-scores.in.second.PBM.file: 3
+    scatterplot.of.enrichment.scores:  "07-output-ets-gata4-diff-analysis.png"
+    label.k-mers: "AAAAACCG,AAAAAACT"
+    scatter.alpha.threshold: 0.01
     sequence: "AACTTTAATGCCTATGTTTGATTTGAAGTCATAGCATAAAAGGTAACATAAGCAACATCCTGACCAATTATCCAAACCATCCAGACATCCCTGAATGGCCAGAGCGTAGCACACGGTCTGTAGGATTAAGAGGTTAACTCCTATAACTTCAAACAAAGTGCCTGATAATAAAAGCAAAAAGTACAAAATTTTAGGTAACTTCCTTTCTTAATTAATTGGACTGACCAGGTGGAAGCGAAGAGTTCTGTGCTGGTGCTTGGAATGTCTATAAAGCTGAGCAACATGACAGCACAATAGAGGAGGAACAAAGATTTTTTTAATATGTTTCTATCCTGTGTCACAGTTTGAAATTGTCCTGGTTTATGTCCCTTTTGGCAAACTTACATAAAAGTGACCTTGTACTGTATTTTATGACCAGATGACTTTTTCCCCCCAGTGGCTAATTTGTATCAGGCCTCCATCTTAAAGAGACACAGAGTGAGTAGGAAGTCCAGCCTCTGTCTCCACGAGCTTTCATTGCATTCTTTCATTATTTTTGCTCGTTTTTTGCCACTGATGATCCATAAATTGTTGGAAATGAGTGATTAAGGAAGTGCTGCTTAGTGTTAGTGGCACATGCGCATATTTGGCCTGGTTCTGGTGGGTGAGAGGAAATCACAGACAAAAGGGAAGCCCCTGCTGGGAACCCTGCAAGGAAATTTAACTTGGGTCATGTTTTGATCTTAGTGTTTATTACAGAAAATGAAGCCATATCTCACTAACTATTGTTACGTGTTAATTTGATTTTCC"
-    plot.resolution: 150
-    zoom: 1,200
 assertions:
     jobStatus: success
 
