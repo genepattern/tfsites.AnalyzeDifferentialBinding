@@ -49,7 +49,7 @@ The raw PBM datasets for two transcription factors are downloaded from [uniPROBE
     - Number of the column containing the e-score in the second PBM file. (1-indexed, 1 is the first column)
 - **Label K-mers (comma-separated string)**
     - `Default = None`
-    - List of kmers to be labeled on the plot.
+    - Comma-separated list of kmers to be labeled on the plot.
 - **Scatter Alpha Threshold (float)**
     - `Default = 1`
     - Alpha threshold that sets the transparency for data points, to show where most data points are concentrated.
