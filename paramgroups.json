@@ -1,12 +1,24 @@
 [
     {
-        "name": "Inputs and Outputs",
+        "name": "First Transciption Factor",
         "description": "",
         "hidden": false,
         "parameters": [
-            "raw.PBM.input.for.first.TF",
-            "raw.PBM.input.for.second.TF",
-	    "scatterplot.of.enrichment.scores"
+            "raw.PBM.data.for.first.TF",
+            "header.present.in.PBM.data.for.first.TF",
+            "column.of.PBM.k-mers.in.PBM.data.for.first.TF",
+            "column.of.E-scores.in.PBM.data.for.first.TF"
+        ]
+    },
+  {
+        "name": "Second Transciption Factor",
+        "description": "",
+        "hidden": false,
+        "parameters": [
+            "raw.PBM.data.for.second.TF",
+          "header.present.in.PBM.data.for.second.TF",
+	        "column.of.PBM.k-mers.in.PBM.data.for.second.TF",
+	        "column.of.E-scores.in.PBM.data.for.second.TF"
         ]
     },
 {
@@ -14,15 +26,11 @@
         "description": "",
         "hidden": false,
         "parameters": [
-            "header.present.in.first.PBM.file",
-            "column.index.of.k-mers.in.first.PBM.file",
-            "column.index.of.E-scores.in.first.PBM.file",
-            "header.present.in.second.PBM.file",
-	    "column.index.of.k-mers.in.second.pbm.file",
-	    "column.index.of.E-scores.in.second.PBM.file",
-            "label.k-mers",
-            "scatter.alpha.threshold",
-	    "trendline"
+          "scatterplot.of.enrichment.scores.output.filename",
+          "binding.site.definition.to.plot",
+          "label.k-mers",
+          "scatter.alpha.threshold",
+	      "trendline"
 
         ]
     }
