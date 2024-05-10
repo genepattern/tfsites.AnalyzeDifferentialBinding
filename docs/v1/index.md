@@ -111,5 +111,7 @@ AAAAAACA     TTTTTTGT     0.11884     1477.50     0.5795
     
 ## Version Comments
 
-- **1.0.0** (2023-11-28): Initial draft of document scaffold.
+
+- **1.0.2** (2024-05-10): Updated parameter names.
 - **1.0.1** (2024-02-02): Draft completed.
+- **1.0.0** (2023-11-28): Initial draft of document scaffold.
