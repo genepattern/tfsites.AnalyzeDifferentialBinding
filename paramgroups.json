@@ -1,24 +1,24 @@
 [
     {
-        "name": "First Transciption Factor",
+        "name": "First Dataset",
         "description": "",
         "hidden": false,
         "parameters": [
             "raw.PBM.data.for.first.TF",
             "header.present.in.PBM.data.for.first.TF",
-            "column.of.PBM.k-mers.in.PBM.data.for.first.TF",
-            "column.of.E-scores.in.PBM.data.for.first.TF"
+            "column.index.of.DNA.k-mers.for.first.TF",
+            "column.index.of.e-scores.for.first.TF"
         ]
     },
   {
-        "name": "Second Transciption Factor",
+        "name": "Second Dataset",
         "description": "",
         "hidden": false,
         "parameters": [
             "raw.PBM.data.for.second.TF",
-          "header.present.in.PBM.data.for.second.TF",
-	        "column.of.PBM.k-mers.in.PBM.data.for.second.TF",
-	        "column.of.E-scores.in.PBM.data.for.second.TF"
+            "header.present.in.PBM.data.for.second.TF",
+	    "column.index.of.DNA.k-mers.for.second.TF",
+	    "column.index.of.e-scores.for.second.TF"
         ]
     },
 {
@@ -26,11 +26,11 @@
         "description": "",
         "hidden": false,
         "parameters": [
-          "scatterplot.of.enrichment.scores.output.filename",
           "binding.site.definition.to.plot",
-          "label.k-mers",
-          "scatter.alpha.threshold",
-	      "trendline"
+          "k-mers.to.label.on.plot",
+          "alpha.threshold.for.dot.transparency",
+	  "draw.trendline",
+          "scatterplot.of.enrichment.score.comparison.output.filename"
 
         ]
     }
