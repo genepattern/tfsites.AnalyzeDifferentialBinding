@@ -12,15 +12,15 @@ module: tfsites.DifferentialBindingAnalysis
 params:
     raw.PBM.data.for.first.TF: "data/08-input_ets-raw-pbm-data.txt"
     header.present.in.PBM.data.for.first.TF: "FALSE"
-    column.of.PBM.k-mers.in.PBM.data.for.first.TF: 1
-    column.of.E-scores.in.PBM.data.for.first.TF: 3
+    column.index.of.DNA.k-mers.for.first.TF: 1
+    column.index.of.e-scores.for.first.TF: 3
     raw.PBM.data.for.second.TF: "data//08-input_etv4-raw-pbm-data.txt"
     header.present.in.PBM.data.for.second.TF: "TRUE"
-    column.of.PBM.k-mers.in.PBM.data.for.second.TF: 1
-    column.of.E-scores.in.PBM.data.for.second.TF: 3
-    scatterplot.of.enrichment.scores.output.filename:  "08-output-etv4-ets-diff-analysis.png"
-    label.k-mers: "TTGGATAT,AAGGATGG"
-    scatter.alpha.threshold: 0.4
+    column.index.of.DNA.k-mers.for.second.TF: 1
+    column.index.of.e-scores.for.second.TF: 3
+    scatterplot.of.enrichment.score.comparison.output.filename:  "08-output-etv4-ets-diff-analysis.png"
+    k-mers.to.label.on.plot: "TTGGATAT,AAGGATGG"
+    alpha.threshold.for.dot.transparency: 0.4
     binding.site.definition.to.plot: "NNGGAWNN"
 assertions:
     jobStatus: success
