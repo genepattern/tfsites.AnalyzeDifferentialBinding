@@ -22,40 +22,44 @@ The raw PBM datasets for two transcription factors are downloaded from [uniPROBE
 
 ## Parameters
 
-### Inputs and Outputs
+### First Dataset
 
 <span style="color: red;">*</span> indicates required parameter
 
-- <span style="color: red;">*</span>**Raw PBM Input for First TF (.tsv)**
+- <span style="color: red;">*</span>**raw PBM input for first TF (.tsv)**
     - Input file containing the raw PBM dataset for the first transcription factor of interest obtained from uniPROBE.
-- <span style="color: red;">*</span>**Raw PBM Input for Second TF (.tsv)**
-    - Input file containing the raw PBM dataset for the second transcription factor of interest obtained from uniPROBE.
-- <span style="color: red;">*</span>**Scatterplot of Enrichment Scores (.png)**
-    - Name of the output file containing a scatterplot of the enrichment scores (e-scores) from the first PBM dataset plotted against the e-scores from the second PBM dataset. 
-
-
-### Other Parameters
-- <span style="color: red;">*</span>**Header Present in First PBM File (boolean)**
+- <span style="color: red;">*</span>**Header Present PBM data for first TF (boolean)**
     - If `True`, a header exists in the first PBM data file. If `False`, no header exists.
 - <span style="color: red;">*</span>**Column Index of K-mers in First PBM File (integer)**
     - Number of the column containing the forward DNA sequence in the first PBM file. (1-indexed, 1 is the first column)
 - <span style="color: red;">*</span>**Column Index of E-Scores in First PBM File (integer)**
     - Number of the column containing the e-score in the first PBM file. (1-indexed, 1 is the first column)
+      
+### Second Dataset
+
+- <span style="color: red;">*</span>**raw PBM input for second TF (.tsv)**
+    - Input file containing the raw PBM dataset for the second transcription factor of interest obtained from uniPROBE.
 - <span style="color: red;">*</span>**Header Present in Second PBM File (boolean)**
     - If True, a header exists in the first PBM data file. If False, no header exists.
 - <span style="color: red;">*</span>**Column Index of K-mers in Second PBM File (integer)**
     - Number of the column containing the forward DNA sequence in the second PBM file. (1-indexed, 1 is the first column)
 - <span style="color: red;">*</span>**Column Index of E-Scores in Second PBM File (integer)**
     - Number of the column containing the e-score in the second PBM file. (1-indexed, 1 is the first column)
-- **Label K-mers (comma-separated string)**
+
+      
+### Other Parameters
+
+- **k-mers to label on plot (comma-separated string)**
     - `Default = None`
     - Comma-separated list of kmers to be labeled on the plot.
-- **Scatter Alpha Threshold (float)**
+- **alpha threshold for dot transparency(float)**
     - `Default = 1`
     - Alpha threshold that sets the transparency for data points, to show where most data points are concentrated.
-- **Trendline (boolean)**
+- **draw trendline (boolean)**
     - Default = `False`
-    - If `True`, plot a line of regression through the data points. If `False`, plot a line through (0,0) with a slope of 1. 
+    - If `True`, plot a line of regression through the data points. If `False`, plot a line through (0,0) with a slope of 1.
+- <span style="color: red;">*</span>**scatterplot of enrichment score comparison output filename (.png)**
+    - Name of the output file containing a scatterplot of the enrichment scores (e-scores) from the first PBM dataset plotted against the e-scores from the second PBM dataset. 
 
 ## Input Files
 
