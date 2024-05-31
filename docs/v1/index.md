@@ -1,4 +1,4 @@
-# tfsites.DifferentialBindingAnalysis v1
+# tfsites.analyzeDifferentialBinding v1
 
 **Author(s):** Joe Solvason  
 
@@ -13,7 +13,7 @@
 
 ## Introduction
 
-`differentialBindingAnalysis` plots the enrichment scores (e-scores) from two PBM datasets against each other. This allows us to assess whether differential binding occurs between the two transcription factors. 
+`analyzeDifferentialBinding` plots the enrichment scores (e-scores) from two PBM datasets against each other. This allows us to assess whether differential binding occurs between the two transcription factors. 
 
 
 ## Methodology
@@ -28,27 +28,30 @@ The raw PBM datasets for two transcription factors are downloaded from [uniPROBE
 
 - <span style="color: red;">*</span>**raw PBM input for first TF (.tsv)**
     - Input file containing the raw PBM dataset for the first transcription factor of interest obtained from uniPROBE.
-- <span style="color: red;">*</span>**Header Present PBM data for first TF (boolean)**
+- <span style="color: red;">*</span>**header present PBM data for first TF (boolean)**
     - If `True`, a header exists in the first PBM data file. If `False`, no header exists.
-- <span style="color: red;">*</span>**Column Index of K-mers in First PBM File (integer)**
+- <span style="color: red;">*</span>**column index of k-mers in first PBM file (integer)**
     - Number of the column containing the forward DNA sequence in the first PBM file. (1-indexed, 1 is the first column)
-- <span style="color: red;">*</span>**Column Index of E-Scores in First PBM File (integer)**
+- <span style="color: red;">*</span>**column index of e-scores in first PBM file (integer)**
     - Number of the column containing the e-score in the first PBM file. (1-indexed, 1 is the first column)
       
 ### Second Dataset
 
 - <span style="color: red;">*</span>**raw PBM input for second TF (.tsv)**
     - Input file containing the raw PBM dataset for the second transcription factor of interest obtained from uniPROBE.
-- <span style="color: red;">*</span>**Header Present in Second PBM File (boolean)**
+- <span style="color: red;">*</span>**header present in second PBM file (boolean)**
     - If True, a header exists in the first PBM data file. If False, no header exists.
-- <span style="color: red;">*</span>**Column Index of K-mers in Second PBM File (integer)**
+- <span style="color: red;">*</span>**column index of k-mers in second PBM file (integer)**
     - Number of the column containing the forward DNA sequence in the second PBM file. (1-indexed, 1 is the first column)
-- <span style="color: red;">*</span>**Column Index of E-Scores in Second PBM File (integer)**
+- <span style="color: red;">*</span>**column index of e-scores in second PBM file (integer)**
     - Number of the column containing the e-score in the second PBM file. (1-indexed, 1 is the first column)
 
       
 ### Other Parameters
 
+- **binding site definition to plot (string)**
+    - `Default = None`
+    - IUPAC definition of a core transcription factor binding site (see [here](https://www.bioinformatics.org/sms/iupac.html)). Only k-mers that abide by this definition will be plotted. 
 - **k-mers to label on plot (comma-separated string)**
     - `Default = None`
     - Comma-separated list of kmers to be labeled on the plot.
@@ -59,7 +62,7 @@ The raw PBM datasets for two transcription factors are downloaded from [uniPROBE
     - Default = `False`
     - If `True`, plot a line of regression through the data points. If `False`, plot a line through (0,0) with a slope of 1.
 - <span style="color: red;">*</span>**scatterplot of enrichment score comparison output filename (.png)**
-    - Name of the output file containing a scatterplot of the enrichment scores (e-scores) from the first PBM dataset plotted against the e-scores from the second PBM dataset. 
+    - Name of the output file containing a scatterplot of the e-scores from the first PBM dataset plotted against the e-scores from the second PBM dataset. 
 
 ## Input Files
 
@@ -99,7 +102,7 @@ AAAAAACA     TTTTTTGT     0.11884     1477.50     0.5795
        
 ## Output Files
 
-  1. Scatterplot of Enrichment Scores (.png)
+  1. scatterplot of enrichment score comparison (.png)
 
    <img src="./02-output-ets-gata4-diff-analysis.png"/>
     
