@@ -7,14 +7,14 @@
 # Note: this test uses a custom diff command
 #
 
-name: "tfsites.DifferentialBindingAnalysis - Basic test"
-module: tfsites.DifferentialBindingAnalysis
+name: "tfsites.AnalyzeDifferentialBinding - Basic test"
+module: tfsites.AnalyzeDifferentialBinding
 params:
-    raw.PBM.data.for.first.TF: "data/08-input_ets-raw-pbm-data.txt"
+    raw.PBM.input.for.first.TF: "data/08-input_ets-raw-pbm-data.txt"
     header.present.in.PBM.data.for.first.TF: "FALSE"
     column.index.of.DNA.k-mers.for.first.TF: 1
     column.index.of.e-scores.for.first.TF: 3
-    raw.PBM.data.for.second.TF: "data//08-input_etv4-raw-pbm-data.txt"
+    raw.PBM.input.for.second.TF: "data//08-input_etv4-raw-pbm-data.txt"
     header.present.in.PBM.data.for.second.TF: "TRUE"
     column.index.of.DNA.k-mers.for.second.TF: 1
     column.index.of.e-scores.for.second.TF: 3

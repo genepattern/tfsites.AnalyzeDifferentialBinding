@@ -4,7 +4,7 @@
         "description": "",
         "hidden": false,
         "parameters": [
-            "raw.PBM.data.for.first.TF",
+            "raw.PBM.input.for.first.TF",
             "header.present.in.PBM.data.for.first.TF",
             "column.index.of.DNA.k-mers.for.first.TF",
             "column.index.of.e-scores.for.first.TF"
@@ -15,7 +15,7 @@
         "description": "",
         "hidden": false,
         "parameters": [
-            "raw.PBM.data.for.second.TF",
+            "raw.PBM.input.for.second.TF",
             "header.present.in.PBM.data.for.second.TF",
 	    "column.index.of.DNA.k-mers.for.second.TF",
 	    "column.index.of.e-scores.for.second.TF"

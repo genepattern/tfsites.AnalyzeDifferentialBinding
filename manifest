@@ -1,28 +1,27 @@
-#tfsites.DifferentialBindingAnalysis
-#Mon Aug 21 21:11:17 UTC 2023
+#tfsites.AnalyzeDifferentialBinding
 JVMLevel=
 LSID=
 author=
-commandLine=python /build/tfsites-webportal/08-analyzeDifferentialBinding/08-analyzeDifferentialBinding.py -a <raw.PBM.data.for.first.TF> -p <scatterplot.of.enrichment.score.comparison.output.filename> -b <header.present.in.PBM.data.for.first.TF> -c <column.index.of.DNA.k-mers.for.first.TF> -d <column.index.of.e-scores.for.first.TF> -e <raw.PBM.data.for.second.TF> -f <header.present.in.PBM.data.for.second.TF> -g <column.index.of.DNA.k-mers.for.second.TF> -i <column.index.of.e-scores.for.second.TF> -k <k-mers.to.label.on.plot> -s <alpha.threshold.for.dot.transparency> -j <binding.site.definition.to.plot> <draw.trendline>
+commandLine=python /build/tfsites-webportal/08-analyzeDifferentialBinding/08-analyzeDifferentialBinding.py -a <raw.PBM.input.for.first.TF> -p <scatterplot.of.enrichment.score.comparison.output.filename> -b <header.present.in.PBM.data.for.first.TF> -c <column.index.of.DNA.k-mers.for.first.TF> -d <column.index.of.e-scores.for.first.TF> -e <raw.PBM.input.for.second.TF> -f <header.present.in.PBM.data.for.second.TF> -g <column.index.of.DNA.k-mers.for.second.TF> -i <column.index.of.e-scores.for.second.TF> -k <k-mers.to.label.on.plot> -s <alpha.threshold.for.dot.transparency> -j <binding.site.definition.to.plot> <draw.trendline>
 cpuType=any
 description=Plots the enrichment scores (e-scores) from two PBM datasets against each other. This allows us to assess whether differential binding occurs between the two transcription factors.
 documentationUrl=https://genepattern.github.io/tfsites.DifferentialBindingAnalysis/v1/
 fileFormat=
 job.cpuCount=
-job.docker.image=genepattern/tfsites\:0.9
+job.docker.image=genepattern/tfsites\:0.10
 job.memory=
 job.walltime=
 language=any
-name=tfsites.DifferentialBindingAnalysis
+name=tfsites.AnalyzeDifferentialBinding
 os=any
 
 p1_MODE=IN
 p1_TYPE=FILE
 p1_default_value=
-p1_description=Input file containing the raw PBM dataset for the first transcription factor of interest obtained from uniPROBE.
-p1_fileFormat=.pbm,.txt
+p1_description=File containing the raw PBM dataset for the first transcription factor of interest obtained from uniPROBE.
+p1_fileFormat=.pbm;.txt
 p1_flag=
-p1_name=raw.PBM.data.for.first.TF
+p1_name=raw.PBM.input.for.first.TF
 p1_numValues=1..1
 p1_optional=
 p1_prefix=
@@ -76,10 +75,10 @@ p4_value=
 p5_MODE=IN
 p5_TYPE=FILE
 p5_default_value=
-p5_description=Input file containing the raw PBM dataset for the second transcription factor of interest obtained from uniPROBE.
-p5_fileFormat=.pbm,txt
+p5_description=File containing the raw PBM dataset for the second transcription factor of interest obtained from uniPROBE.
+p5_fileFormat=.pbm;txt
 p5_flag=
-p5_name=raw.PBM.data.for.second.TF
+p5_name=raw.PBM.input.for.second.TF
 p5_numValues=1..1
 p5_optional=
 p5_prefix=
@@ -131,8 +130,8 @@ p8_value=
 
 p9_MODE=
 p9_TYPE=TEXT
-p9_default_value=<raw.PBM.data.for.first.TF_basename>_<raw.PBM.data.for.second.TF_basename>_diff_analysis.png
-p9_description=Name of the output file containing a scatterplot of the enrichment scores (e-scores) from the first PBM dataset plotted against the e-scores from the second PBM dataset.
+p9_default_value=<raw.PBM.input.for.first.TF_basename>_<raw.PBM.input.for.second.TF_basename>_diff_analysis.png
+p9_description=Name of the output file containing a scatterplot of the e-scores from the first PBM dataset plotted against the e-scores from the second PBM dataset.
 p9_fileFormat=
 p9_flag=
 p9_name=scatterplot.of.enrichment.score.comparison.output.filename
@@ -189,7 +188,7 @@ p12_value=FALSE\=FALSE;TRUE\=TRUE
 p13_MODE=
 p13_TYPE=TEXT
 p13_default_value=NNGGAWNN
-p13_description=binding_site_definition_to_plot
+p13_description=IUPAC definition of the core transcription factor binding site (see <a href="https://www.bioinformatics.org/sms/iupac.html">herei</a>). Only k-mers that abide by this definition will be plotted.
 p13_fileFormat=
 p13_flag=
 p13_name=binding.site.definition.to.plot
